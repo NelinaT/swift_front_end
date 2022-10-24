@@ -1,0 +1,17 @@
+body{
+    background-color: #87c6e7;
+    font-family:"Verdana";
+}
+
+.menu{
+    text-align: center;
+    margin-top: -3%;
+}
+
+.navigation{
+    margin-right: 5%;  
+}
+.logo{
+    margin-left: 12%;
+    width: 50px;
+}
