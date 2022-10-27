@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact us</title>
+        <link rel="stylesheet" href="../CSS/Contact_us.css">
+    </head>
+    <body>
+        <header class="menu">
+            <div class="logo_container">
+                <a href="../HTML/index.html">    
+                    <img src="../Images/Solar system/Logo.png" alt="logo" class="logo " >
+                </a>
+            </div>
+            <a href="News.html" class="navigation">News</a>
+            <a href="Contact_us.html" class="navigation">Contact us</a>
+            <a href="Gallery.html" class="navigation">Gallery</a>
+        </header>
+        <main class="content">
+            <h1>Contact us</h1>
+            <h2>Any questions about Solar system?</h2>
+            <p>Feel free to share them with us:</p>
+            <figure>
+                <img src="../Images/Solar system/image_9137_1e-Solar-System-Manifolds.jpg" >
+            </figure>
+            <div class="form">
+                <div>
+                    <span class="info">Name:</span>
+                    <input type="text" required/>
+                </div>
+                <div>
+                    <span class="info"> E-mail:</span>
+                    <input type="email" required/>
+                </div>
+                <div>
+                    <span class="info">About which planet is your question?:</span>
+                    <select name="planet">
+                        <option value="Mercury">Mercury</option>
+                        <option value="Venus">Venus</option>
+                        <option value="Earth">Earth</option>
+                        <option value="Mars">Mars</option>
+                        <option value="Jupiter">Jupiter</option>
+                        <option value="Saturn">Saturn</option>
+                        <option value="Uranus">Uranus</option>
+                        <option value="Neptune">Neptune</option>
+                    </select>
+                </div>
+                <div>
+
+                    <span class="info">Your question?</span>
+                    <textarea required></textarea>
+                </div>
+                <div>
+                    
+                    <span class="info">File/image:</span>
+                    <input type="file">
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <span>I want to recieve all news about the Solar system by email.</span>
+                </div>
+                <button type="submit">Submit</button>
+            </div>
+        </main>
+    </body>
+</html>
