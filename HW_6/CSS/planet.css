@@ -1,0 +1,30 @@
+.planet_image{
+    height: 420px;
+    position: relative;
+    left: 350px;
+    bottom: 230px;
+}
+
+.video{
+    position: relative;
+    bottom: 360px; 
+}
+
+div>div{
+    position: relative;
+    left: 530px;
+    bottom: 650px;
+}
+p{
+    line-height: 25px;
+}
+.last_paragraph{
+    position: relative;
+    bottom: 640px;
+    width: 1200px;
+}
+.Mars_info{
+    position: relative;
+    bottom: 630px;
+    right: 40px;
+}
