@@ -4,6 +4,7 @@ body{
     color: #10109d;
     margin: 0;
 }
+
 .menu{
     background-color: #87c6e7;
     width: 100%;
@@ -11,32 +12,48 @@ body{
     top: 0;
     z-index: 1;
 }
+
 .logo_container {
     display: inline-block;
     margin-right: 400px;
     margin-left: 120px;
 }
+
 .logo_container > a {
     display: block;
     width: 50px;
     height: 50px;
 }
+
 .logo{
     width: 50px;
 }
+
 .navigation{
     margin-right: 100px;
     position: relative;
     bottom: 15px;    
 }
+
 .content{
     background-color: #d1e8f3;
     margin: 0 120px;
+    padding-bottom: 50px;
     position: relative; 
     top:53px;
     border-top: 1px solid #d1e8f3;
 }
+
 .text{
     width: 700px;
     padding: 10px 35px;
+}
+
+.gallery_image{
+    width: 400px;
+    height: 270px;
+}
+
+.image_container{
+    text-align: center;
 }

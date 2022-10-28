@@ -2,9 +2,10 @@
 <html lang="en">
     <head>
         <title>Contact us</title>
-        <link rel="stylesheet" href="../CSS/nav_bar.css">
-        <link rel="stylesheet" href="../CSS/Contact_us.css">
+        <link rel="stylesheet" href="../CSS/common.css">
+        <link rel="stylesheet" href="../CSS/contact_us.css">
     </head>
+
     <body>
         <header class="menu">
             <div class="logo_container">
@@ -12,10 +13,11 @@
                     <img src="../Images/Solar system/Logo.png" alt="logo" class="logo " >
                 </a>
             </div>
-            <a href="News.html" class="navigation">News</a>
-            <a href="Contact_us.html" class="navigation">Contact us</a>
-            <a href="Gallery.html" class="navigation">Gallery</a>
+            <a href="index.html" class="navigation">Solar system</a>
+            <a href="contact_us.html" class="navigation">Contact us</a>
+            <a href="gallery.html" class="navigation">Gallery</a>
         </header>
+
         <main class="content">
             <div class="heading">
                 <h1>Contact us</h1>
@@ -30,12 +32,15 @@
                     <div >Name:</div>
                     <input type="text" required/>
                 </div>
+                
                 <div>
                     <div > E-mail:</div>
                     <input type="email" required/>
                 </div>
+
                 <div>
                     <div >About which planet is your question?:</div>
+
                     <select name="planet">
                         <option value="Mercury">Mercury</option>
                         <option value="Venus">Venus</option>
@@ -46,19 +51,24 @@
                         <option value="Uranus">Uranus</option>
                         <option value="Neptune">Neptune</option>
                     </select>
+
                 </div>
+
                 <div>
                     <div >Your question?</div>
                     <textarea required></textarea>
                 </div>
+
                 <div>
                     <span >File/image:</span>
                     <input type="file">
                 </div>
+
                 <div>
                     <input type="checkbox">
                     <span>I want to recieve all news about the Solar system by email.</span>
                 </div>
+
                 <button type="submit">Submit</button>
             </div>
         </main>

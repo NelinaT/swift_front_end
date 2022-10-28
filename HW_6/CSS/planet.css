@@ -1,8 +1,11 @@
 .planet_image{
     height: 420px;
+    
+}
+figure.planet_image {
     position: relative;
-    left: 350px;
-    bottom: 230px;
+    left: 700px;
+    bottom: 478px;
 }
 
 .video{
@@ -15,15 +18,18 @@ div>div{
     left: 530px;
     bottom: 650px;
 }
+
 p{
     line-height: 25px;
 }
+
 .last_paragraph{
     position: relative;
     bottom: 640px;
     width: 1200px;
 }
-.Mars_info{
+
+.mars_info{
     position: relative;
     bottom: 630px;
     right: 40px;
