@@ -53,7 +53,7 @@ figure>img{
 }
 .form{
     position: relative;
-    bottom: 350px;
+    bottom: 380px;
     width:610px;
     padding:10px;
 }
@@ -63,9 +63,6 @@ span{
 }
 div>div{
     padding: 2px 0px;
-}
-.info{
-    display: block;
 }
 button{
     margin-top: 20px;
