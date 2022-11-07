@@ -1,0 +1,372 @@
+@font-face {
+    font-family: spaceX;
+    src: url(fonts/D-DIN.woff2);
+}
+@font-face {
+    font-family: spaceX;
+    src: url(fonts/D-DIN-Bold.woff2);
+    font-weight: bold;
+}
+@main_font: spaceX;
+@main_text_color: white;
+@background_color:black;
+@font_size: 16px;
+
+
+
+
+.main_content(){
+    color: @main_text_color;
+    background-color: @background_color;
+    font-size: @font_size;
+    font-family: @main_font;
+
+}
+.hyperlinks(){
+    color: @main_text_color;
+    margin-left: 20px;
+    text-decoration: none;
+    font-family: @main_font;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.background(){
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sectionStyle(){  
+    width: 100%;
+    height: 750px;
+}
+
+
+
+    
+body{
+        .main_content();
+    }
+
+header{
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 10;
+    nav{
+        padding: 30px;
+        .navigation{
+            position: relative; 
+        }
+    }
+}
+
+#logo{
+    width: 210px;
+    height: 26px;
+    color: white;
+    .fill-white{
+        fill: white;
+    }
+}
+
+ a{
+   .hyperlinks();
+   position: relative;
+   margin: 0 10px;
+   transition: width 2s ease-in-out;
+   border-bottom: 0;
+
+
+   &:not(.space_logo):after{
+
+    content:"";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 1px;
+    background-color: @main_text_color;
+    transition: width 0.2s ease-in-out;
+    
+   }
+    &:hover::after{
+        width: 100%;
+    }
+   
+}
+.end_nav{
+    position: absolute;
+    top: 14px;
+    right: 30px;
+    width: 200px;
+    #burger{
+        position: absolute;
+        left: 75px;
+        top: 0px;
+        cursor: pointer;
+        div{
+            background-color: @main_text_color;
+            width: 30px;
+            height: 1px;
+            left: 10px;
+            margin-top: 5px;
+        }
+    }       
+}
+.wrapper{
+    background-image: url(images/rocket_.webp);
+    .background();
+    .sectionStyle();
+
+    #heading{
+        text-align: center;
+        margin: auto;
+        position: relative;
+        top: 260px;
+        // width: 70%;
+        // padding: 15%;
+        h1{
+            font-size: 80px;
+            margin-bottom: 10px;
+        }
+        > h2{
+                font-size: 25px;
+                font-weight: normal;
+                margin-top: 10px;
+            }
+    }
+}
+
+.info{
+    text-align: center;
+    margin-top: 30px;
+    .stats{
+            display: inline-block;
+            margin: 0 85px;
+            span{
+                font-size: 140px;
+            }
+            div{
+                    font-size: 22px;
+                }
+    }
+}
+
+// .main_content(@color: white){
+//     &:hover{
+//         border-bottom: 1px solid white;
+//         padding-bottom: 2px;
+//     }
+// }
+
+
+// #section_2{
+//     background-image: url(images/rocket_2.webp);
+//     .sectionStyle();
+//     .background();
+// }
+
+// .paragraph_wrapper>p{
+//     width: 50%;
+//     max-width: 520px;
+//     font-weight: 400;
+//     font-style: normal;
+//     margin-left: 100px;
+//     /* margin-top: 100px; */
+//     padding-top: 250px;
+//     font-size: 20px;
+//     line-height: 30px;
+
+// }
+
+//  #section_3{
+//     width: 100%;
+//     height: 750px;
+//  }
+
+//  .background_video{
+//     object-fit: cover;
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     /* z-index: 1; */
+//  }
+
+// .overview{
+//     position: relative;
+//     top:100px;
+//     z-index: 5;
+//     width: 50%;
+//     margin-left: 100px;
+
+// }
+
+// .overview >div> h2{
+//     font-size: 18px;
+//     margin-bottom: 5px;
+
+// }
+
+// .overview >div>h3{
+//     font-size: 32px;
+//     margin-top: 5px;
+// }
+
+// table{
+//     width: 100%;
+//     max-width: 520px;
+//     border-collapse: collapse;
+// }
+
+// tr{
+//     box-sizing: border-box;
+//     border-bottom: 1px solid rgba(255,255,255,.3);
+// }
+
+// td{
+//     font-size: 16px;
+//     text-align: left;
+//     padding: 20px 0;
+// }
+
+// td:last-child{
+//     text-align: right;
+// }
+
+// td>span{
+//     color: #868686;
+// }
+
+// #section_4{
+//     width: 100%;
+//     height: 800px;
+// }
+
+// h4{
+//     z-index: 3;
+//     position: relative;
+//     top: 420px;
+//     left: 10px;
+//     font-size: 36px;
+// }
+
+// #section_5{
+//     width: 100%;
+//     height: 700px;
+//     background-image: url(images/MerlinVac.webp);
+//     background-repeat: no-repeat;
+//     background-size: cover;
+// }
+
+// .merlin {
+//     padding-top: 30px;
+//     height: 140px;
+// }
+
+// p.sea_level,
+// p.vacuum {
+//     display: none;
+// }
+
+// input[type="radio"]:checked+.sea_level,
+// input[type="radio"]:checked+.vacuum  {
+//     display: block; 
+// }
+
+// input[type="radio"].sea_level,
+// input[type="radio"].vacuum {
+//     display: none;
+// }
+
+// input[type="radio"].sea_level:checked ~ label.sea_level,
+// input[type="radio"].vacuum:checked ~ label.vacuum {
+//     border-bottom: 1px solid white;
+//     padding-bottom: 2px;
+//     color: white;
+    
+// }
+
+// label.sea_level,
+// label.vacuum {
+//     position: absolute;
+//     top: 100px;
+//     color: #868686;
+//     cursor: pointer;
+// }
+
+// label.vacuum {
+//     left: 100px;
+// }
+
+// .merlin p{
+//     width: 550px;
+//     line-height: 25px;
+//     font-size: 16px;
+// }
+// #section_6{
+//     margin-top: 200px;
+//     width: 100%;
+//     margin-bottom: 100px;
+// }
+// #section_6 img{
+//     width: 100%;
+//     height: 700px;
+// }
+
+// img~p{
+//     text-align: center;
+// }
+
+// .line-tall{
+//     width: 1px;
+//     height: 140px;
+//     margin: 0 auto 20px;
+//     background-color: #fff;
+// }
+
+// .launch_services{
+//     text-align: center;
+//     margin-bottom: 100px;
+// }
+
+// .launch_services p{
+//     color: #868686;
+// }
+
+// p>a{
+//     margin-left: 2px;
+// }
+// p > a:hover {
+//     color: #afacb0;
+//     cursor: pointer;
+//     border-bottom: none;    
+// }
+
+// button{
+//     background-color: black;
+//     color: white;
+//     border: 2px solid white;
+//     height: 55px;
+//     padding: 15px;
+//     font-weight: bold;
+//     margin: 10px;
+// }
+
+//  button:hover{
+//     background-color: white;
+//     color: black;
+//     cursor: pointer;
+//  }
+
+//  .footer{
+//     text-align: center;
+//  }
+
+//  .footer a{
+//     font-size: 12px;
+//  }
+
+//  .footer a:hover{
+//     color: #868686;
+//     text-decoration: none;
+//  }
