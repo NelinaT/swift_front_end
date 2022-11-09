@@ -45,7 +45,7 @@ a {
   transition: width 2s ease-in-out;
   border-bottom: 0;
 }
-a:not(.space_logo, .button_link):after {
+a.heaeder_link:after {
   content: "";
   position: absolute;
   left: 0;
@@ -171,7 +171,7 @@ table {
 }
 table tr {
   box-sizing: border-box;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid #5e5353;
 }
 table tr td {
   font-size: 16px;
@@ -182,7 +182,7 @@ table tr td:last-child {
   text-align: right;
 }
 table tr td > span {
-  color: #868686;
+  color: #938484;
 }
 #section_4 {
   width: 100%;
@@ -259,7 +259,7 @@ table tr td > span {
 .merlin label.vacuum {
   position: absolute;
   top: 100px;
-  color: #868686;
+  color: #938484;
   cursor: pointer;
 }
 .merlin label.vacuum {
@@ -301,20 +301,20 @@ table tr td > span {
   width: 1px;
   height: 140px;
   margin: 0 auto 20px;
-  background-color: #fff;
+  background-color: white;
 }
 .launch_services p {
-  color: #868686;
+  color: #938484;
 }
 .launch_services p > a {
   margin-left: 2px;
 }
 .launch_services p > a:hover {
-  color: #afacb0;
+  color: #cccccc;
   cursor: pointer;
   border-bottom: none;
 }
-button {
+.launch_services button {
   background-color: black;
   color: white;
   border: 2px solid white;
@@ -322,20 +322,33 @@ button {
   padding: 15px;
   font-weight: bold;
   margin: 10px;
+  visibility: inherit;
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+  transition: color 1s cubic-bezier(0.25, 1, 0.25, 1), background-color 1s cubic-bezier(0.25, 1, 0.25, 1);
 }
-button:hover {
+.launch_services button:hover {
   background-color: white;
   color: black;
   cursor: pointer;
+  visibility: inherit;
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+.launch_services button:hover::after {
+  width: 100%;
 }
 .footer {
   text-align: center;
-  font-size: 12px;
 }
 .footer span {
-  color: #868686;
+  color: #c3baba;
+  font-size: 12px;
+}
+.footer a {
+  font-size: 12px;
 }
 .footer a:hover {
-  color: #868686;
+  color: #c3baba;
   text-decoration: none;
 }
