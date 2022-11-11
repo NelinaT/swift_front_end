@@ -316,27 +316,40 @@ table tr td > span {
 }
 .launch_services button {
   background-color: black;
-  color: white;
   border: 2px solid white;
   height: 55px;
   padding: 15px;
   font-weight: bold;
   margin: 10px;
-  visibility: inherit;
-  opacity: 1;
-  transform: translate3d(0px, 0px, 0px);
-  transition: color 1s cubic-bezier(0.25, 1, 0.25, 1), background-color 1s cubic-bezier(0.25, 1, 0.25, 1);
+  position: relative;
+}
+.launch_services button .hover {
+  position: absolute;
+  top: 0;
+  left: -1px;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
+  background-color: white;
+  transform-origin: top center;
+  transform: scale3d(1, 0, 1);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.launch_services button .text {
+  transition: color 1s cubic-bezier(0.25, 1, 0.25, 1);
+  color: white;
+  position: relative;
 }
 .launch_services button:hover {
-  background-color: white;
-  color: black;
   cursor: pointer;
-  visibility: inherit;
-  opacity: 1;
-  transform: translate3d(0px, 0px, 0px);
 }
-.launch_services button:hover::after {
-  width: 100%;
+.launch_services button:hover .hover {
+  transform: scale3d(1, 1, 1);
+  transform-origin: bottom center;
+}
+.launch_services button:hover .text {
+  color: black;
 }
 .footer {
   text-align: center;

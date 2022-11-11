@@ -64,10 +64,6 @@
         }
     }
 }
-
-
-
-
     
 body{
         .main_content();
@@ -358,28 +354,46 @@ table{
 
 .launch_services button{
     background-color: @background_color;
-    color: @main_text_color;
+    
     border: 2px solid @main_text_color;
     height: 55px;
     padding: 15px;
     font-weight: bold;
     margin: 10px;
+    position: relative;
 
-    visibility: inherit;
-    opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
-        transition: color 1s cubic-bezier(.25,1,.25,1),background-color 1s cubic-bezier(.25,1,.25,1);
-    &:hover{
-            background-color: @main_text_color;
-            color: @background_color;
-            cursor: pointer;
-            visibility: inherit;
-            opacity: 1;
-            transform: translate3d(0px, 0px, 0px);
-         }
-    &:hover::after{
-    width: 100%;
+    
+    .hover{
+        position: absolute;
+        top:0;
+        left:-1px;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: auto;
+        background-color: white;
+        transform-origin: top center;
+        transform: scale3d(1,0,1);
+        transition: transform .6s cubic-bezier(.19,1,.22,1);
+
     }
+    .text{
+        transition: color 1s cubic-bezier(.25,1,.25,1);
+        color: @main_text_color;
+        position: relative;
+    }
+    &:hover{
+        cursor: pointer;
+        .hover{
+            transform: scale3d(1,1,1);
+            transform-origin: bottom center;
+        }
+        .text{
+            color: @background_color;
+        }
+        
+    }
+
 }
 
  .footer{
