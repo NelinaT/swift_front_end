@@ -1,0 +1,10 @@
+img{
+    width: 500px;
+}
+a{
+    text-decoration: none;
+    transition:
+}
+a:after{
+    border-bottom:  1px solid red ;
+}
