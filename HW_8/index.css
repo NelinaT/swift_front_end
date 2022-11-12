@@ -89,7 +89,6 @@ a:hover::after {
   width: 100%;
   height: 750px;
   margin-top: 0px;
-  margin-right: 10px;
   float: left;
 }
 .wrapper #heading {
@@ -126,7 +125,6 @@ a:hover::after {
   width: 100%;
   height: 750px;
   margin-top: 0px;
-  margin-right: 10px;
   float: left;
   background-repeat: no-repeat;
   background-size: cover;
@@ -146,7 +144,6 @@ a:hover::after {
   width: 100%;
   height: 750px;
   margin-top: 0px;
-  margin-right: 10px;
   float: left;
 }
 .background_video {
@@ -197,7 +194,6 @@ table tr td > span {
   width: 100%;
   height: 750px;
   margin-top: 0px;
-  margin-right: 10px;
   float: left;
   background-image: url(images/falcon_in_flight.webp);
   background-repeat: no-repeat;
@@ -238,7 +234,6 @@ table tr td > span {
   width: 100%;
   height: 750px;
   margin-top: 0px;
-  margin-right: 10px;
   float: left;
   background-image: url(images/MerlinVac.webp);
   background-repeat: no-repeat;
@@ -285,7 +280,6 @@ table tr td > span {
   width: 100%;
   height: 750px;
   margin-top: 0px;
-  margin-right: 10px;
   float: left;
   background-image: url(images/F9_DM2_LAUNCH_3840x2560.webp);
   background-repeat: no-repeat;
@@ -300,7 +294,6 @@ table tr td > span {
   width: 100%;
   height: 750px;
   margin-top: 0px;
-  margin-right: 10px;
   float: left;
   height: 600px;
 }
