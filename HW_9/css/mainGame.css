@@ -1,0 +1,120 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Bold.ttf);
+    font-weight: bold;
+}
+.wrapper{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 80px;
+}
+.score{
+    box-sizing: border-box;
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 5px 8px 9px rgba(0, 0, 0, 0.43);
+    border-radius: 0px 0px 20px 0px;
+
+    position: absolute;
+    width: 200px;
+    height: 80px;
+    left: 0px;
+    top: 0px;
+
+    text-align: center;
+}
+
+div p{
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 30px;
+    margin: 10px 18px;
+    color: #361157;
+}
+
+.timer{
+    position: absolute;
+    width: 1000px;
+    height: 20px;
+    left: calc(50% - 500px);
+    top: 23px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 5px 8px 9px rgb(0 0 0 / 43%);
+    border-radius: 10px;
+}
+.timer div{
+    position: absolute;
+    width: 800px;
+    height: 20px;
+
+    background: #8E44AD;
+    border-radius: 10px;
+}
+
+.restart{
+    content: url("../images/restart 1.png");
+    position: absolute;
+    width: 100px;
+    height: 80px;
+    right: 0px;
+    top: 0px;
+    text-align: center;
+    padding: 17px 24px 18px 23px;
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 5px 8px 9px rgba(0, 0, 0, 0.43);
+    border-radius: 0px 0px 0px 20px;
+}
+
+table{
+    position: relative;
+    width: 1000px;
+    height: 650px;
+    left: calc(50% - 500px);
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 5px 8px 9px rgb(0 0 0 / 43%);
+    border-radius: 10px;
+}
+tr{
+    border: 3px solid orange;
+}
+
+  td{
+    background-image: url("../images/Card_Hover\ 10.png");
+    background-repeat: no-repeat;
+ }
+
+ td.planet_1:hover{
+    background-image: url(../images/Card_Hover\ 22.png);
+ }
+ td.planet_2:hover{
+    background-image: url(../images/Card_Hover\ 23.png);
+ }
+ td.planet_3:hover{
+    background-image: url(../images/Card_Hover\ 24.png);
+ }
+ td.planet_4:hover{
+    background-image: url(../images/Card_Hover\ 25.png);
+ }
+ td.planet_5:hover{
+    background-image: url(../images/Card_Hover\ 26.png);
+ }
+ td.planet_6:hover{
+    background-image: url(../images/Card_Hover\ 31.png);
+ }
+ td.planet_7:hover{
+    background-image: url(../images/Card_Hover\ 28.png);
+ }
+ td.planet_8:hover{
+    background-image: url(../images/Card_Hover\ 29.png);
+ }
+ td.planet_9:hover{
+    background-image: url(../images/Card_Hover\ 30.png);
+ }
