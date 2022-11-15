@@ -1,0 +1,29 @@
+div{
+    background-color: #C7000066;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+h1{
+    text-transform: uppercase;
+    color: #C0392B;
+    font-size: 100px;
+    font-weight: bold;
+    font-family: 'Roboto';
+    text-shadow: 6px 4px 4px rgb(0 0 0 / 50%);
+}
+h2{
+  
+    width: 317px;
+
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+margin: 0 auto 150px;
+    color: #FFFFFF;
+}
+ button{
+    position: static;
+ }

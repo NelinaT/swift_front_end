@@ -3,6 +3,10 @@
     src: url(../fonts/Roboto/Roboto-Bold.ttf);
     font-weight: bold;
 }
+@keyframes time {
+    from {with: 100%;}
+    to {width: 0;}
+  }
 .wrapper{
     position: relative;
     top: 0;
@@ -49,13 +53,15 @@ div p{
 }
 .timer div{
     position: absolute;
-    width: 800px;
+    width: 100%;
     height: 20px;
 
     background: #8E44AD;
     border-radius: 10px;
+    animation: time 50s 1;
 }
 
+ 
 .restart{
     content: url("../images/restart 1.png");
     position: absolute;
@@ -74,21 +80,22 @@ div p{
 
 table{
     position: relative;
-    width: 1000px;
-    height: 650px;
-    left: calc(50% - 500px);
+    
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.8);
     box-shadow: 5px 8px 9px rgb(0 0 0 / 43%);
     border-radius: 10px;
-}
-tr{
-    border: 3px solid orange;
+    margin: 10px auto;
 }
 
   td{
-    background-image: url("../images/Card_Hover\ 10.png");
+    background-image: url(../images/Card_Hover\ 10.png);
     background-repeat: no-repeat;
+    background-position: center center;
+    /* scale: 0.9; */
+    width: 194px;
+    height: 210px;
+    background-size: 149px 194px;
  }
 
  td.planet_1:hover{
@@ -118,3 +125,7 @@ tr{
  td.planet_9:hover{
     background-image: url(../images/Card_Hover\ 30.png);
  }
+
+
+
+ 
