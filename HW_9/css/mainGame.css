@@ -96,6 +96,7 @@ table{
     width: 194px;
     height: 210px;
     background-size: 149px 194px;
+    transition: background-image 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
  }
 
  td.planet_1:hover{
