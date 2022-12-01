@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .tooltipItem{
+            position: relative;
+            height: 55px;
+            width: 60px;
+            padding-top:5px;
+            margin: 200px auto 0 auto;
+
+            color: #fff;
+            font-size: 40px;
+            text-align: center;
+            background-color: #27ae60;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .tooltipWrapper{
+            /* display: none; */
+            position: absolute;
+            height: 130px;
+            width: 200px;
+            top: 70px;
+            left: 40px;
+            padding: 20px;
+            background-color: #bdc3c7;
+            box-shadow: 5px 5px 5px #2c3e50;
+            color:#2c3e50;
+            font-size: 14px;
+        }
+
+        .hidden{
+            display: none;
+            margin-top:-3px;
+        }
+        /* .show{
+            display: none;
+        } */
+        </style>
+        <script>
+            function showHide() {
+            var textArea=document.querySelectorAll(".tooltipItem > div");
+            for(var i=0; i<textArea.length; i++){
+                textArea[i].classList.toggle("hidden");
+            }
+        }
+        </script>
+</head>
+<body>
+    <div class="tooltipItem" onclick="showHide()">
+        <div class="plus" ;>+</div>
+        <div class="hidden ">-</div>
+        <div class="tooltipWrapper hidden">
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente error facere possimus repellendus suscipit autem ullam corporis, voluptates officiis ex sunt consequatur ipsa dolore ipsum? Quidem, placeat quam. Non, id!   
+        </div>
+    </div>
+</body>
+</html>
