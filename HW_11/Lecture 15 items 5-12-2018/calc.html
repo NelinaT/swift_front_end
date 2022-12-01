@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="calc.js"></script>
+</head>
+
+<body>
+    <div class="calcWrapper">
+        <div>
+            <div class="calcButton" onclick="chooseNumber(1)">1</div>
+            <div class="calcButton" onclick="chooseNumber(2)">2</div>
+            <div class="calcButton" onclick="chooseNumber(3)">3</div>
+            <div class="calcButton" onclick="chooseNumber(4)">4</div>
+            <div class="calcButton" onclick="chooseNumber(5)">5</div>
+            <div class="calcButton" onclick="chooseNumber(6)">6</div>
+            <div class="calcButton" onclick="chooseNumber(7)">7</div>
+            <div class="calcButton" onclick="chooseNumber(8)">8</div>
+            <div class="calcButton" onclick="chooseNumber(9)">9</div>
+            <div class="calcButton calcButtonZero"  onclick="chooseNumber(0)">0</div>
+        </div>
+        <div class="calcSignWrapper">
+            <div class="calcButton" onclick="operation('+')">+</div>
+            <div class="calcButton" onclick="result()">=</div>
+        </div>
+        <div class="calcSignWrapper">
+            <div class="calcButton" onclick="operation('-')">-</div>
+            <div class="calcButton" onclick="operation('*')">*</div>
+        </div>
+    </div>
+    
+</body>
+</html>
