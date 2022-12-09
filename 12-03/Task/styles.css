@@ -202,7 +202,12 @@ body{
     display: none;
 }
 .requared{
-background-color: #f39c12;
+    margin-top: 15px;
+    padding: 5px;
+    text-align: center;
+    color: #f44336;
+    position: relative;
+    bottom: 520px;
 
 }
 

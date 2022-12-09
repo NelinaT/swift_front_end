@@ -7,7 +7,7 @@ var saveBtn=document.getElementById("saveBtn");
 // var cardArray=[];
 var cardArray=[{
     firstname: "Ivan",
-    job: "Dev",
+    job: "QA",
     phone: "0888888888888",
     email: "ivan@gmail.com"
 },{
