@@ -7,6 +7,9 @@ var imageArray=["22.png","23.png","24.png","25.png","26.png","28.png", "29.png",
 var usedCards;
 var cells;
 var newCard;
+var addPoints;
+var score;
+var highScore=0;
 
 htmlGenerator();
 
@@ -75,31 +78,48 @@ function cardCell(){
 
 function openCard(e){
     var $target = $(e.target);
-    var flag;
+    // var flag;
     
-    
+    if($("img.hidden").length==2){
+        console.log( $("img.hidden"))
+        compareCards( $("img.hidden"));
+        $("img").removeClass("hidden");
+    }
 
     if($target.hasClass("col")){
         $target.find("img").removeClass("hidden");
-        flag=true;
-        return;
+        // flag=true;
+        // return;
     }
     else{
         $target.addClass("hidden"); 
-        flag=false;
+        // flag=false;
     }
 
-        compareCards($target, $("hidden"));
-
-   
-    
+        // compareCards($target, $("hidden"));
+ 
 }
 
-function compareCards(firstCard,secondCardB){
-    console.log(firstCard, "2" +secondCardB);
+function compareCards(clickedCards){
+    console.log(clickedCards);
+    score=$("span#score");
+    highScore=$("span#highScore")
+    if($(clickedCards).eq(0).parent().attr("style")==$(clickedCards).eq(1).parent().attr("style")){
+    
+        $(clickedCards).remove();
+        // $("#highScore")= $("#highScore")+100;
+        
+        addPoints=Number(score.text())+100;
+        score.text(addPoints); 
 
-
-
+    }
+    else if(Number(score.text())>0){
+        addPoints=Number(score.text())-10;
+        score.text(addPoints); 
+    }
+    if( highScore.text()< addPoints ){
+        highScore.text(addPoints);
+    }
 }
 
 
