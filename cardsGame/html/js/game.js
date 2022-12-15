@@ -24,12 +24,11 @@ function htmlGenerator(){
     }
     for(var j=0; j<6; j++){
         $("<div>",{
-            class: "col back"}).clone().appendTo(".row").on("click", openCard);   
+            class: "col "}).clone().appendTo(".row").on("click", openCard);   
     }
     cardCell();
 }
     
-
 function randomCard(){
 
     var rand = imageArray[Math.floor(Math.random() * imageArray.length)];
@@ -49,9 +48,6 @@ function cardCell(){
         if($.inArray( newCard, usedCards )<0){
 
             $(cells[i]).prepend('<img src="' + closedCard + '"/>');
-            // $(cells[i]).css({
-            //     "display": "none"
-            //  });
             $(cells[i]).css({
                 "background-image": "url("+image.src+")",
                 "background-repeat": "no-repeat"
@@ -64,9 +60,7 @@ function cardCell(){
             $(cells[i]).prepend('<img src="' +closedCard + '"/>');
             usedCards.push(newCard);
             imageArray.splice(index, 1);
-            // $(cells[i]).css({
-            //         "display": "none"
-            //      });
+
             $(cells[i]).css({
             "background-image": "url("+image.src+")",
             "background-repeat": "no-repeat"
@@ -78,52 +72,60 @@ function cardCell(){
 
 function openCard(e){
     var $target = $(e.target);
-    // var flag;
+ 
     
     if($("img.hidden").length==2){
-        console.log( $("img.hidden"))
-        compareCards( $("img.hidden"));
+       
         $("img").removeClass("hidden");
     }
-
     if($target.hasClass("col")){
         $target.find("img").removeClass("hidden");
-        // flag=true;
-        // return;
     }
     else{
         $target.addClass("hidden"); 
-        // flag=false;
     }
-
-        // compareCards($target, $("hidden"));
- 
-}
+    if($("img.hidden").length==2){
+       
+        compareCards( $("img.hidden"));
+        // if(!$("img.hidden")){
+        //     $("<div>",{
+        //         class :"win"
+        //     }).appendTo(".row");
+        //     console.log("win");
+            
+        // }
+    }
+};
 
 function compareCards(clickedCards){
     console.log(clickedCards);
     score=$("span#score");
     highScore=$("span#highScore")
+   
     if($(clickedCards).eq(0).parent().attr("style")==$(clickedCards).eq(1).parent().attr("style")){
     
         $(clickedCards).remove();
-        // $("#highScore")= $("#highScore")+100;
         
         addPoints=Number(score.text())+100;
         score.text(addPoints); 
-
+       
     }
-    else if(Number(score.text())>0){
-        addPoints=Number(score.text())-10;
-        score.text(addPoints); 
+   else 
+   {
+       if(Number(score.text())>0){
+            addPoints=Number(score.text())-10;
+            score.text(addPoints); 
+        }
+        return ;
     }
     if( highScore.text()< addPoints ){
         highScore.text(addPoints);
     }
+    
+
 }
 
 
 // $('.col').prepend('<img id="theImg" src="../images/Card_Hover_28.png" />');
 // $('.col').prepend('<img src="' + randomCard() + '"/>');
-
 
