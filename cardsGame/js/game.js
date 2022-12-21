@@ -10,13 +10,15 @@ var newCard;
 var addPoints;
 var score;
 var highScore=0;
+var resulWrapper=$(".wrapper");
+var allTimeBest=$("#allTimeBest");
+score=$("span#score");
+highScore=$("span#highScore");
+// highScore.text(localStorage.highScore());
 
 htmlGenerator();
 
 function htmlGenerator(){
-    $('<div/>',{
-        class: 'table'
-    }).appendTo("body");
     for(var i=0; i<3; i++){
         $("<div>",{
             class :"row"
@@ -27,6 +29,10 @@ function htmlGenerator(){
             class: "col "}).clone().appendTo(".row").on("click", openCard);   
     }
     cardCell();
+    // var localHighScore= localStorage.highScore
+    if(localStorage.highScore){
+        highScore.text(localStorage.highScore);
+    }
 }
     
 function randomCard(){
@@ -87,22 +93,17 @@ function openCard(e){
     if($("img.hidden").length==2){
        
         compareCards( $("img.hidden"));
-        // if(!$("img.hidden")){
-        //     $("<div>",{
-        //         class :"win"
-        //     }).appendTo(".row");
-        //     console.log("win");
-            
-        // }
+        
     }
+ 
 };
 
 function compareCards(clickedCards){
-    console.log(clickedCards);
-    score=$("span#score");
-    highScore=$("span#highScore")
+  
+    var backgroundClickedFirstCard=$(clickedCards).eq(0).parent().attr("style");
+    var backgroundClickedSecondCard=$(clickedCards).eq(1).parent().attr("style");
    
-    if($(clickedCards).eq(0).parent().attr("style")==$(clickedCards).eq(1).parent().attr("style")){
+    if(backgroundClickedFirstCard==backgroundClickedSecondCard){
     
         $(clickedCards).remove();
         
@@ -120,12 +121,17 @@ function compareCards(clickedCards){
     }
     if( highScore.text()< addPoints ){
         highScore.text(addPoints);
+        // localStorage.highScore= addPoints;
     }
-    
-
+    if($("img").length==0){
+        resulWrapper.addClass("hidden");
+        $("#win").removeClass("hidden");
+        $(".table").addClass("darken")
+        allTimeBest.text() += highScore.text();
+        if(Number(localStorage.highScore)  < highScore.text()){
+            localStorage.highScore=highScore.text();
+        }
+    }
 }
 
-
-// $('.col').prepend('<img id="theImg" src="../images/Card_Hover_28.png" />');
-// $('.col').prepend('<img src="' + randomCard() + '"/>');
 
