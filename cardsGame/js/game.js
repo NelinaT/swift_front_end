@@ -18,6 +18,21 @@ highScore=$("span#highScore");
 
 htmlGenerator();
 
+// $("img").click(function(){
+//     debugger
+//     $(this).toggleClass("active");
+// })
+
+$(".table").one("click",function(){
+    $(".timer div").animate( {width: "0"},
+    60000,
+    function(){
+        //redirect here
+       window.location.href="gameOver.html?points="+score.text();
+    
+    })
+  });
+
 function htmlGenerator(){
     for(var i=0; i<3; i++){
         $("<div>",{
@@ -76,23 +91,34 @@ function cardCell(){
     }
 }
 
+// $("img").addClass("active");
+
+
 function openCard(e){
     var $target = $(e.target);
- 
     
-    if($("img.hidden").length==2){
+    if($("img.active").length==2){
        
-        $("img").removeClass("hidden");
+        $("img").removeClass("active");
+        // $("img").addClass("unactive");
+  
+
     }
     if($target.hasClass("col")){
-        $target.find("img").removeClass("hidden");
+        $target.find("img").removeClass("active");
+
+
+
     }
     else{
-        $target.addClass("hidden"); 
+        $target.addClass("active"); 
+
+
+
     }
-    if($("img.hidden").length==2){
+    if($("img.active").length==2){
        
-        compareCards( $("img.hidden"));
+        compareCards( $("img.active"));
         
     }
  
@@ -109,29 +135,34 @@ function compareCards(clickedCards){
         
         addPoints=Number(score.text())+100;
         score.text(addPoints); 
+        if( highScore.text()< addPoints ){
+            highScore.text(addPoints);
+            // localStorage.highScore= addPoints;
+        }
+        if($("img").length==0){
+            resulWrapper.addClass("active");
+            $("#win").removeClass("active");
+            $(".table").addClass("darken")
+            $("#finalScore").append(score.text());
+            $("#newBest").addClass("active");
+           
+            $(".timer div").stop();
+            addPoints=Number(score.text())+Math.round( $(".timer div").width());
+            highScore.text(addPoints);
+            allTimeBest.append(highScore.text());
+    
+    
+            console.log($(".timer div").width());
+    
+            if(Number(localStorage.highScore)  < highScore.text()){
+                localStorage.highScore=highScore.text();
+                $("#newBest").removeClass("active");
+            }
+        }
        
     }
-   else 
-   {
-       if(Number(score.text())>0){
-            addPoints=Number(score.text())-10;
-            score.text(addPoints); 
-        }
-        return ;
-    }
-    if( highScore.text()< addPoints ){
-        highScore.text(addPoints);
-        // localStorage.highScore= addPoints;
-    }
-    if($("img").length==0){
-        resulWrapper.addClass("hidden");
-        $("#win").removeClass("hidden");
-        $(".table").addClass("darken")
-        allTimeBest.text() += highScore.text();
-        if(Number(localStorage.highScore)  < highScore.text()){
-            localStorage.highScore=highScore.text();
-        }
+   else if(Number(score.text())>0){
+        addPoints=Number(score.text())-10;
+        score.text(addPoints); 
     }
 }
-
-

@@ -4,18 +4,24 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/gameOver.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"> </script>
         <title>Game</title>
     </head>
     <body>
         <div>
 
             <h1>Game over</h1>
-            <h2>Final score:</h2>
+            <h2>Final score: </h2>
             <a href="mainGame.html">
                 <button>
                     Try again
                 </button>
             </a> 
         </div>
+        <script>
+            var points = location.search.split('points=')[1];
+            console.log(points);
+            $("h2").append(points);
+        </script>
     </body>
 </html>
