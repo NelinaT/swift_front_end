@@ -3,13 +3,11 @@
     src: url(../fonts/Roboto/Roboto-Bold.ttf);
     font-weight: bold;
 }
-@keyframes time {
-    from {with: 100%;}
-    to {width: 0;}
-  }
+
 @keyframes rotateCard {
    0%{
-      display: inline-block;
+      /* display: inline-block; */
+      
       transform: rotateY(0);
    }
    50%{
@@ -19,8 +17,9 @@
       transform: rotateY(80deg);
    }
    100%{
+      visibility: hidden;
       transform: rotateY(90deg);
-      display: none;
+      /* display: none; */
    }
 }
 
@@ -58,14 +57,14 @@ width: 1000px;
 }
 
 .active{
-   animation: rotateCard 1s linear;
-   animation-fill-mode: forwards;
+   animation: rotateCard 1s forwards;
+   /* animation-fill-mode: forwards; */
 }
 
-.unactive{
-   animation: rotateCard 1s linear;
-   animation-fill-mode: backwards;
-}
+.unactive {
+   animation: rotateCard 1s reverse;
+   animation-fill-mode: backwards; 
+ }
 
 .wrapper{
     position: relative;
@@ -137,9 +136,7 @@ div p{
     position: relative;
     left: calc(50% - 150px);
     border-radius: 20%;
-    padding: 10px;
-
-   
+    padding: 10px;  
 }
 .darken{
    filter: brightness(0.5);
@@ -184,15 +181,3 @@ div p{
    border-radius: 0px 0px 0px 20px;
 }
 
-/* #win>a{
-   margin-bottom: 15px;
-} */
-
-/* .col.stayOpen{
-   display: inline-block;
-} */
-
-/* .back{
-   background-image: url(../images/Card_Hover_10.png);
-   background-repeat: no-repeat;
-} */
